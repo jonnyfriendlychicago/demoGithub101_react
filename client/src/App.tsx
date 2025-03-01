@@ -1,7 +1,15 @@
-import {HomePage} from "./layouts/Home/HomePage.tsx";
+import {HomePage} from "./PageComps/Home/HomePage.tsx";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 import { Routes, Route, Navigate } from "react-router-dom";
+import {NavbarLibraryVersion} from "./PageComps/NavbarAndFooter/NavbarLibraryVersion.tsx";
+import ReactBootstrapNavBar01 from "./PageComps/NavbarAndFooter/ReactBootstrapNavBar01.tsx";
+// import Navbar from "react-bootstrap/Navbar";
+// import Container from "react-bootstrap/Container";
+// import {LinkContainer} from "react-router-bootstrap";
+// import Nav from "react-bootstrap/Nav";
+
+// import {NavbarReactBootstrap2} from "./PageComps/NavbarAndFooter/NavbarReactBootstrap2.tsx";
 // above replaces below
 // import {Redirect, Route, Switch} from "react-router-dom";
 
@@ -9,13 +17,17 @@ import { Routes, Route, Navigate } from "react-router-dom";
 export const App = ()=>  {
 
     return (
+        <>
+        {/*<NavbarReactBootstrap2 />*/}
 
-                <Routes>
-                    <Route path="/" element={<Navigate to="/home" replace />} />
+        <NavbarLibraryVersion />
+            <ReactBootstrapNavBar01 />
 
-                    <Route path="/home" element={<HomePage />} />
-                </Routes>
-
+        <Routes>
+            <Route path="/" element={<Navigate to="/home" replace />} />
+            <Route path="/home" element={<HomePage />} />
+        </Routes>
+        </>
 
 
     )
