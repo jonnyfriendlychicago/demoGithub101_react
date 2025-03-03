@@ -4,6 +4,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { Routes, Route, Navigate } from "react-router-dom";
 import {NavbarLibraryVersion} from "./PageComps/NavbarAndFooter/NavbarLibraryVersion.tsx";
 import ReactBootstrapNavBar01 from "./PageComps/NavbarAndFooter/ReactBootstrapNavBar01.tsx";
+import ReactBootstrapNavBar02 from "./PageComps/NavbarAndFooter/ReactBootstrapNavBar02.tsx";
 // import Navbar from "react-bootstrap/Navbar";
 // import Container from "react-bootstrap/Container";
 // import {LinkContainer} from "react-router-bootstrap";
@@ -22,6 +23,7 @@ export const App = ()=>  {
 
         <NavbarLibraryVersion />
             <ReactBootstrapNavBar01 />
+            <ReactBootstrapNavBar02 />
 
         <Routes>
             <Route path="/" element={<Navigate to="/home" replace />} />
